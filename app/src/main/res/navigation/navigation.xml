@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/TranslatorFragment">
+
+    <fragment
+        android:id="@+id/TranslatorFragment"
+        android:name="com.example.morsetranslator.fragments.TranslatorFragment"
+        android:label="fragment_default"
+        tools:layout="@layout/fragment_translator">
+        <action
+            android:id="@+id/action_translatorFragment_to_morseCodeFragment"
+            app:destination="@id/MorseCodeFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/MorseCodeFragment"
+        android:name="com.example.morsetranslator.fragments.MorseCodeFragment"
+        android:label="fragment_code"
+        tools:layout="@layout/fragment_morse_code">
+        <action
+            android:id="@+id/action_morseCodeFragment_to_translatorFragment"
+            app:destination="@+id/TranslatorFragment" />
+    </fragment>
+
+</navigation>
