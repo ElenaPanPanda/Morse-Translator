@@ -8,7 +8,7 @@
 
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/text_layout"
+        android:id="@+id/input_layout"
         android:layout_width="0dp"
         android:layout_height="120dp"
         android:layout_marginHorizontal="24dp"
@@ -21,7 +21,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/text_et"
+            android:id="@+id/input_et"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:imeOptions="actionDone"
@@ -31,20 +31,20 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/morse_layout"
+        android:id="@+id/result_layout"
         android:layout_width="0dp"
         android:layout_height="120dp"
         android:layout_marginHorizontal="24dp"
         android:layout_marginTop="8dp"
-        android:hint="@string/morse"
         android:selectAllOnFocus="true"
         app:errorEnabled="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/text_layout">
+        app:layout_constraintTop_toBottomOf="@id/input_layout">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/morse_et"
+            android:id="@+id/result_et"
+            android:enabled="false"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:imeOptions="actionDone"
@@ -52,6 +52,26 @@
             android:maxLines="4" />
 
     </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/switch_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@id/guide_btn"
+        app:layout_constraintTop_toBottomOf="@id/result_layout"
+        app:backgroundTint="@null"
+        app:trackTint="@color/gray"
+        app:thumbTint="@color/green"
+        android:layout_marginTop="16dp"/>
+
+    <TextView
+        android:id="@+id/is_checked_tv"
+        android:text="@string/to_morse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/switch_btn"
+        app:layout_constraintEnd_toEndOf="@id/switch_btn"
+        android:textSize="12sp"/>
 
     <Button
         android:id="@+id/clear_btn"
@@ -62,8 +82,8 @@
         android:layout_marginTop="60dp"
         android:textSize="16sp"
         app:backgroundTint="@null"
-        app:layout_constraintStart_toStartOf="@id/morse_layout"
-        app:layout_constraintTop_toBottomOf="@id/morse_layout"
+        app:layout_constraintStart_toStartOf="@id/result_layout"
+        app:layout_constraintTop_toBottomOf="@id/switch_btn"
 
         app:layout_constraintVertical_bias="0.2" />
 
@@ -76,14 +96,9 @@
         android:textSize="16sp"
         app:backgroundTint="@null"
         android:layout_marginTop="60dp"
-        app:layout_constraintTop_toBottomOf="@id/morse_layout"
-        app:layout_constraintEnd_toEndOf="@id/morse_layout"
-
+        app:layout_constraintTop_toBottomOf="@id/switch_btn"
+        app:layout_constraintEnd_toEndOf="@id/result_layout"
         app:layout_constraintVertical_bias="0.2" />
-
-
-
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

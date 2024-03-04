@@ -5,5 +5,10 @@
         <item name="colorSecondary">@color/green</item>
     </style>
 
+    <style name="SwitchStyle">
+        <item name="colorSwitchThumbNormal">@color/green</item>
+        <item name="colorControlActivated">@color/green</item>
+    </style>
+
     <style name="Theme.MorseTranslator" parent="Base.Theme.MorseTranslator" />
 </resources>

@@ -6,4 +6,6 @@
     <string name="clear">CLEAR</string>
     <string name="guide">GUIDE</string>
     <string name="morse">Morse</string>
+    <string name="to_morse">to morse</string>
+    <string name="to_text">to text</string>
 </resources>
