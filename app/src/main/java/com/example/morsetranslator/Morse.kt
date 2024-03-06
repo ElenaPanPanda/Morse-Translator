@@ -50,7 +50,7 @@ object Morse {
 
     private val SPACE = Code(' ', "   ")
 
-    const val DIVIDER = '|'
+    const val DIVIDER = "  |  "
 
     private const val UNKNOWN = '?'
 

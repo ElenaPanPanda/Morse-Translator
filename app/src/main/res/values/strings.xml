@@ -8,4 +8,5 @@
     <string name="morse">Morse</string>
     <string name="to_morse">to morse</string>
     <string name="to_text">to text</string>
+    <string name="alphabet_rules">Letters are separated with one space, words are separated with 3 spaces . Unknown symbols will be displayed as \'?\'</string>
 </resources>
