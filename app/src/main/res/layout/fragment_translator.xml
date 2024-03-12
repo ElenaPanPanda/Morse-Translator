@@ -75,17 +75,19 @@
         app:selectionRequired="true"
         app:singleSelection="true">
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/to_morse_btn"
             style="?attr/materialButtonOutlinedStyle"
-            android:layout_width="wrap_content"
+            app:backgroundTint="@drawable/button_toggle_selector"
+            android:layout_width="110dp"
             android:layout_height="wrap_content"
             android:text="@string/to_morse" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/to_text_btn"
             style="?attr/materialButtonOutlinedStyle"
-            android:layout_width="wrap_content"
+            app:backgroundTint="@drawable/button_toggle_selector"
+            android:layout_width="110dp"
             android:layout_height="wrap_content"
             android:text="@string/to_text" />
     </com.google.android.material.button.MaterialButtonToggleGroup>
@@ -101,13 +103,13 @@
 
     <Button
         android:id="@+id/clear_btn"
+        style="@style/Widget.Material3.Button.TonalButton"
         android:layout_width="@dimen/button_width"
         android:layout_height="@dimen/button_high"
         android:layout_marginTop="60dp"
-        android:background="@drawable/button_shape"
+        android:backgroundTint="@color/light_green"
         android:text="@string/clear"
         android:textSize="16sp"
-        app:backgroundTint="@null"
         app:layout_constraintStart_toStartOf="@id/result_layout"
         app:layout_constraintTop_toBottomOf="@id/toggleButton"
 
@@ -115,13 +117,13 @@
 
     <Button
         android:id="@+id/guide_btn"
+        style="@style/Widget.Material3.Button.TonalButton"
         android:layout_width="@dimen/button_width"
         android:layout_height="@dimen/button_high"
         android:layout_marginTop="60dp"
-        android:background="@drawable/button_shape"
+        android:backgroundTint="@color/light_green"
         android:text="@string/guide"
         android:textSize="16sp"
-        app:backgroundTint="@null"
         app:layout_constraintEnd_toEndOf="@id/result_layout"
         app:layout_constraintTop_toBottomOf="@id/toggleButton"
         app:layout_constraintVertical_bias="0.2" />

@@ -3,8 +3,8 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="text">Text</string>
-    <string name="clear">CLEAR</string>
-    <string name="guide">GUIDE</string>
+    <string name="clear">Clear</string>
+    <string name="guide">Guide</string>
     <string name="morse">Morse</string>
     <string name="to_morse">To morse</string>
     <string name="to_text">To text</string>
