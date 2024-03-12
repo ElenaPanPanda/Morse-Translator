@@ -18,21 +18,17 @@ class TranslatorFragment : Fragment(R.layout.fragment_translator) {
         super.onViewCreated(view, savedInstanceState)
         binding = FragmentTranslatorBinding.bind(view)
 
-
         var toMorse = true
 
-        binding.switchBtn.setOnCheckedChangeListener { _, isChecked ->
-            if (isChecked) {
-                binding.inputLayout.hint = getString(R.string.morse)
-                binding.isCheckedTv.setText(R.string.to_text)
-                toMorse = false
-            } else {
-                binding.inputLayout.hint = getString(R.string.text)
-                binding.isCheckedTv.setText(R.string.to_morse)
-                toMorse = true
-            }
+        binding.toMorseBtn.setOnClickListener {
+            binding.inputLayout.hint = getString(R.string.text)
+            toMorse = true
         }
 
+        binding.toTextBtn.setOnClickListener {
+            binding.inputLayout.hint = getString(R.string.morse)
+            toMorse = false
+        }
 
 
         binding.inputEt.addTextChangedListener(object : TextWatcher {
@@ -47,7 +43,6 @@ class TranslatorFragment : Fragment(R.layout.fragment_translator) {
                     Morse.translateFromMorse(s.toString())
 
                 binding.resultEt.setText(result)
-
             }
         })
 
